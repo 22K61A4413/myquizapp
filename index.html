@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="question-palette"></div>
+  <div class="quiz-container">
+    <!-- Start Page -->
+    <div id="start-page" class="page">
+      <h1>Welcome to the Quiz!</h1>
+      <p>Click the button below to start the quiz.</p><br>
+      <button id="start-btn"   onclick="startQuiz()">Start the Quiz</button>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page" style="display:none;">
+      <h1>Quiz Time!</h1>
+      <div id="quiz">
+        <div id="question-container">
+          <p id="question"></p>
+          <ol id="options"></ol>
+        </div>
+        <div id="navigation">
+          <button id="prev-btn" onclick="prevQuestion()" disabled>Previous</button>
+          <button id="next-btn" onclick="nextQuestion()">Next</button>
+          <button id="submit-btn" onclick="submitQuiz()" style="display:none;">Submit</button>
+        </div>
+        <div id="score-container"></div>
+      </div>
+    </div>
+
+    <!-- End Page -->
+    <div id="end-page" class="page" style="display:none;">
+      <h1>Quiz Completed!</h1>
+      <p><b>You scored <span id="final-score"></span> / <span id="total-marks"></span></b></p><br>
+      <p>Your quiz has been submitted successfully!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

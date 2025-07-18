@@ -1,0 +1,269 @@
+/* Reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff7f50, #1e90ff); /* Colorful gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container for the quiz */
+.quiz-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Heading style */
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Option buttons styling */
+#options {
+  list-style-type: decimal;
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#options li {
+  margin: 10px 0;
+}
+
+#options button {
+  background: linear-gradient(45deg, #ff6347, #ff1493); /* Gradient for buttons */
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#options button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff1493, #ff6347); /* Button hover effect */
+}
+
+#options button:disabled {
+  background: #d3d3d3;
+  cursor: not-allowed;
+}
+
+/* Next button styling */
+#navigation {
+  margin-top: 20px;
+}
+
+#start-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#start-btn:hover {
+  background: gray;}
+#submit-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#submit-btn:hover {
+  background: gray;
+}
+#prev-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#prev-btn {
+  background: #45a049;
+}
+
+#next-btn {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#next-btn:hover {
+  background: #45a049;
+}
+/* Normal button styling */
+#options button {
+background: linear-gradient(45deg, #ff6347, #ff1493);
+color: white;
+padding: 12px 25px;
+font-size: 18px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+#options button:hover {
+transform: scale(1.05);
+}
+
+/* Highlight selected button */
+#options button.selected {
+background: linear-gradient(45deg, #4caf50, #2e8b57); /* Green gradient for selected answers */
+color: white;
+font-weight: bold;
+transform: scale(1.1);
+}
+
+/* Highlight incorrect button */
+#options button.incorrect {
+background: linear-gradient(45deg, #ff6347, #b22222); /* Red gradient for incorrect answers */
+color: white;
+font-weight: bold;
+}
+
+/* Highlight correct button */
+#options button.correct {
+background: linear-gradient(45deg, #4caf50, #228b22); /* Different green for correct answers */
+color: white;
+font-weight: bold;
+}
+
+
+/* Score container styling */
+#score-container {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#score-container span {
+  color: #ff6347; /* Score color */
+}
+
+/* Page styling for start, quiz, and end pages */
+.page {
+  display: none;
+}
+#start-page, #end-page {
+  display: block;
+}
+
+/* Palette styling */
+#question-palette {
+position: fixed;
+top: 20px;
+right: 20px;
+background: #fff;
+padding: 10px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Palette item - default */
+#question-palette .palette-item {
+display: inline-block;
+width: 30px;
+height: 30px;
+margin: 5px;
+text-align: center;
+line-height: 30px;
+border-radius: 50%;
+font-weight: bold;
+cursor: pointer;
+border: 1px solid #ccc;
+}
+
+/* Styles for answered questions */
+.palette-item.answered {
+background-color: green;
+color: white;
+}
+
+/* Styles for reviewed questions */
+.palette-item.reviewed {
+background-color: purple;
+color: white;
+}
+
+/* Styles for unanswered questions */
+.palette-item.unanswered {
+background-color: red;
+color: white;
+}
+
+/* Hover effect for palette items */
+.palette-item:hover {
+border: 2px solid #000;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  #question {
+    font-size: 20px;
+  }
+
+  #options button {
+    font-size: 16px;
+  }
+
+  #next-btn {
+    font-size: 16px;
+  }
+}
